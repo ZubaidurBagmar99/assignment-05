@@ -75,3 +75,61 @@ document.getElementById('area-parallelogram').addEventListener('click',function(
     }
     
 });
+
+
+// Rhombus
+document.getElementById('area-rhombus').addEventListener('click',function(){
+    const name = document.getElementById('name-rhombus').innerText;
+    const distanceOneRhombus = document.getElementById('distance-one-rhombus').value;
+    const distanceTwoRhombus = document.getElementById('distance-two-rhombus').value;
+    if (distanceOneRhombus === "" || isNaN(distanceOneRhombus) || distanceOneRhombus < 0 ) {
+        alert('Please enter first valid number');
+    }
+    else if (distanceTwoRhombus === "" || isNaN(distanceTwoRhombus) || distanceTwoRhombus < 0) {
+        alert('Please enter second valid number');
+    }
+     else {
+        serial += 1;
+        const rhombusMultiplication = distanceOneRhombus * distanceTwoRhombus;
+        return dataDisplayAreaCalculation(name,rhombusMultiplication.toFixed(2))
+    }
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Area Calculation
+function dataDisplayAreaCalculation(name,areaMultiplication) {
+    const container = document.getElementById("table-container");
+    const tr = document.createElement("tr");
+    tr.style.display = 'grid';
+    tr.style.gridTemplateColumns = 'auto auto auto auto';
+    tr.style.margin ='16px 0';
+
+    tr.innerHTML = `
+      <td class="mr-4">${serial}</td>
+      <td>${name}</td>
+      <td class="ml-2">${areaMultiplication}cm<sup>2</sup></td>
+      <td class="text-white bg-blue-600 px-3 rounded-lg cursor-pointer ml-2">Convert to m<sup>2</sup></td>      
+    `;
+    container.appendChild(tr);
+}
+
+// color
+function colorGenerate(elementId){
+    const randomNumber = Math.floor(Math.random() * 16777215);
+    const randomCode = '#' + randomNumber.toString(16);
+    document.getElementById(elementId).style.backgroundColor = randomCode;
+}

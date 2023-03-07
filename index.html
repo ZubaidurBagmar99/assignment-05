@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Geometry</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -71,19 +71,19 @@
                 </div>
                 <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="rhombus" onmouseenter="colorGenerate('rhombus')">
                     <img src="images/rhombus.png" alt="">
-                    <h2 class="my-3 font-semibold text-2xl">Rhombus</h2>
+                    <h2 id="name-rhombus" class="my-3 font-semibold text-2xl">Rhombus</h2>
                     <p>Area (A) = 0.5 ✕ d<sub>1</sub> ✕ d<sub>2</sub>
                         <i id="edit-rhombus" class="fa fa-pencil-square-o cursor-pointer"></i>
                     </p>
                     <div class="hidden" id="show-rhombus">
                         <div class="mt-3 flex justify-center items-center gap-3">
-                            <input type="text" placeholder="d1" class="bg-gray-100 w-16 pl-2">
+                            <input id="distance-one-rhombus" type="text" placeholder="d1" class="bg-gray-100 w-16 pl-2">
                             <span>cm</span>
-                            <input type="text" placeholder="d2" class="bg-gray-100 w-16 pl-2">
+                            <input id="distance-two-rhombus" type="text" placeholder="d2" class="bg-gray-100 w-16 pl-2">
                             <span>cm</span>
                         </div>
                     </div>
-                    <button class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                    <button id="area-rhombus" class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
                 </div>
                 <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="pentagon" onmouseenter="colorGenerate('pentagon')">
                     <img src="images/pentagon.png" alt="">
