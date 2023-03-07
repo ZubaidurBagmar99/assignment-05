@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between items-center px-10 py-5 bg-slate-100">
+            <div>
+                <h2 class="text-3xl font-bold">Interactive</h2>
+                <h4 class="text-2xl">Geometry Genius</h4>
+            </div>
+            <button class="bg-blue-500 px-4 py-2 rounded-xl font-semibold text-white" >Blog</button>
+        </nav>
+    </header>
+    <main>
+        <section class="flex flex-col md:flex-row justify-around">
+            <section class="grid grid-cols-1 md:grid-cols-3 md:mx-10 md:my-4 gap-5 md:w-full">
+                <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl"  id="triangle" onmouseenter="colorGenerate('triangle')">
+                    <img src="images/triangle.png" alt="">
+                    <h2 id="name-triangle" class="my-3 font-semibold text-2xl">Triangle</h2>
+                    <p>Area (A) = 0.5 b ✕ h
+                        <i id="edit-triangle" class="fa fa-pencil-square-o cursor-pointer"></i>
+                    </p>
+                    <div class="hidden" id="show-triangle">
+                        <div class="mt-3 flex justify-center items-center gap-3">
+                            <input id="base-of-triangle" type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                            <input id="height-of-triangle" type="text" placeholder="h" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <button id="area-triangle" class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                </div>
+                <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="rectangle" onmouseenter="colorGenerate('rectangle')">
+                    <img src="images/rectangle.png" alt="">
+                    <h2 id="name-rectangle" class="my-3 font-semibold text-2xl">Rectangle</h2>
+                    <p>Area (A) = w ✕ I
+                        <i id="edit-rectangle" class="fa fa-pencil-square-o cursor-pointer"></i>
+                    </p>
+                    <div class="hidden" id="show-rectangle">
+                        <div class="mt-3 flex justify-center items-center gap-3">
+                            <input id="width-of-rectangle" type="text" placeholder="w" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                            <input id="length-of-rectangle" type="text" placeholder="l" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <button id="area-rectangle" class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                </div>
+                <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="parallelogram" onmouseenter="colorGenerate('parallelogram')">
+                    <img src="images/parallelogram.png" alt="">
+                    <h2 id="name-parallelogram" class="my-3 font-semibold text-2xl">Parallelogram</h2>
+                    <p>Area (A) = b ✕  h
+                        <i id="edit-parallelogram" class="fa fa-pencil-square-o cursor-pointer"></i>
+                    </p>
+                    <div class="hidden" id="show-parallelogram">
+                        <div class="mt-3 flex justify-center items-center gap-3">
+                            <input id="base-of-parallelogram" type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                            <input id="height-of-parallelogram" type="text" placeholder="h" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <button id="area-parallelogram" class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                </div>
+                <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="rhombus" onmouseenter="colorGenerate('rhombus')">
+                    <img src="images/rhombus.png" alt="">
+                    <h2 class="my-3 font-semibold text-2xl">Rhombus</h2>
+                    <p>Area (A) = 0.5 ✕ d<sub>1</sub> ✕ d<sub>2</sub>
+                        <i id="edit-rhombus" class="fa fa-pencil-square-o cursor-pointer"></i>
+                    </p>
+                    <div class="hidden" id="show-rhombus">
+                        <div class="mt-3 flex justify-center items-center gap-3">
+                            <input type="text" placeholder="d1" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                            <input type="text" placeholder="d2" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                </div>
+                <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="pentagon" onmouseenter="colorGenerate('pentagon')">
+                    <img src="images/pentagon.png" alt="">
+                    <h2 class="my-3 font-semibold text-2xl">Pentagon</h2>
+                    <p>Area (A) = 0.5 ✕ p ✕ b
+                        <i id="edit-pentagon" class="fa fa-pencil-square-o cursor-pointer"></i>
+                    </p>
+                    <div class="hidden" id="show-pentagon">
+                        <div class="mt-3 flex justify-center items-center gap-3">
+                            <input type="text" placeholder="p" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                            <input type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                </div>
+                <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="ellipse" onmouseenter="colorGenerate('ellipse')">
+                    <img src="images/ellipse.png" alt="">
+                    <h2 class="my-3 font-semibold text-2xl">Ellipse</h2>
+                    <p>Area (A) = &pi;ab
+                        <i id="edit-ellipse" class="fa fa-pencil-square-o cursor-pointer"></i>
+                    </p>
+                    <div class="hidden" id="show-ellipse">
+                        <div class="mt-3 flex justify-center items-center gap-3">
+                            <input type="text" placeholder="a" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                            <input type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                </div>
+                
+            </section>
+            <div class="md:w-96 mt-4 mr-2 border-2 rounded-lg">
+                <h2 class="text-center mt-2 font-semibold text-xl">Area Calculation</h2>
+                <table>
+                    <tbody id="table-container">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
