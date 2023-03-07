@@ -168,3 +168,10 @@ function colorGenerate(elementId){
     const randomCode = '#' + randomNumber.toString(16);
     document.getElementById(elementId).style.backgroundColor = randomCode;
 }
+
+function blogPage(){
+    location.href = 'blog.html';
+}
+function homePage(){
+    location.href = 'index.html';
+}
