@@ -96,6 +96,24 @@ document.getElementById('area-rhombus').addEventListener('click',function(){
     
 });
 
+// Pentagon
+document.getElementById('area-pentagon').addEventListener('click',function(){
+    const name = document.getElementById('name-pentagon').innerText;
+    const calculateOfPentagon = document.getElementById('calculate-of-pentagon').value;
+    const baseOfPentagon = document.getElementById('base-of-pentagon').value;
+    if (calculateOfPentagon === "" || isNaN(calculateOfPentagon) || calculateOfPentagon < 0 ) {
+        alert('Please enter first valid number');
+    }
+    else if (baseOfPentagon === "" || isNaN(baseOfPentagon) || baseOfPentagon < 0) {
+        alert('Please enter second valid number');
+    }
+     else {
+        serial += 1;
+        const pentagonMultiplication = calculateOfPentagon * baseOfPentagon;
+        return dataDisplayAreaCalculation(name,pentagonMultiplication.toFixed(2))
+    }
+    
+});
 
 
 

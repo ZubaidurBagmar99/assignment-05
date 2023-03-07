@@ -87,19 +87,19 @@
                 </div>
                 <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="pentagon" onmouseenter="colorGenerate('pentagon')">
                     <img src="images/pentagon.png" alt="">
-                    <h2 class="my-3 font-semibold text-2xl">Pentagon</h2>
+                    <h2 id="name-pentagon" class="my-3 font-semibold text-2xl">Pentagon</h2>
                     <p>Area (A) = 0.5 ✕ p ✕ b
                         <i id="edit-pentagon" class="fa fa-pencil-square-o cursor-pointer"></i>
                     </p>
                     <div class="hidden" id="show-pentagon">
                         <div class="mt-3 flex justify-center items-center gap-3">
-                            <input type="text" placeholder="p" class="bg-gray-100 w-16 pl-2">
+                            <input id="calculate-of-pentagon" type="text" placeholder="p" class="bg-gray-100 w-16 pl-2">
                             <span>cm</span>
-                            <input type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
+                            <input id="base-of-pentagon" type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
                             <span>cm</span>
                         </div>
                     </div>
-                    <button class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                    <button id="area-pentagon" class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
                 </div>
                 <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="ellipse" onmouseenter="colorGenerate('ellipse')">
                     <img src="images/ellipse.png" alt="">
