@@ -115,7 +115,24 @@ document.getElementById('area-pentagon').addEventListener('click',function(){
     
 });
 
-
+// Pentagon
+document.getElementById('area-ellipse').addEventListener('click',function(){
+    const name = document.getElementById('name-ellipse').innerText;
+    const valueOfA = document.getElementById('value-of-a').value;
+    const valueOfB = document.getElementById('value-of-b').value;
+    if (valueOfA === "" || isNaN(valueOfA) || valueOfA < 0 ) {
+        alert('Please enter first valid number');
+    }
+    else if (valueOfB === "" || isNaN(valueOfB) || valueOfB < 0) {
+        alert('Please enter second valid number');
+    }
+     else {
+        serial += 1;
+        const ellipseMultiplication = valueOfA * valueOfB;
+        return dataDisplayAreaCalculation(name,ellipseMultiplication.toFixed(2))
+    }
+    
+});
 
 
 

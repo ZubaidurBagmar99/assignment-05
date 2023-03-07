@@ -103,19 +103,19 @@
                 </div>
                 <div class="flex justify-center items-center flex-col border-2 p-4 rounded-xl" id="ellipse" onmouseenter="colorGenerate('ellipse')">
                     <img src="images/ellipse.png" alt="">
-                    <h2 class="my-3 font-semibold text-2xl">Ellipse</h2>
+                    <h2 id="name-ellipse" class="my-3 font-semibold text-2xl">Ellipse</h2>
                     <p>Area (A) = &pi;ab
                         <i id="edit-ellipse" class="fa fa-pencil-square-o cursor-pointer"></i>
                     </p>
                     <div class="hidden" id="show-ellipse">
                         <div class="mt-3 flex justify-center items-center gap-3">
-                            <input type="text" placeholder="a" class="bg-gray-100 w-16 pl-2">
+                            <input id="value-of-a" type="text" placeholder="a" class="bg-gray-100 w-16 pl-2">
                             <span>cm</span>
-                            <input type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
+                            <input id="value-of-b" type="text" placeholder="b" class="bg-gray-100 w-16 pl-2">
                             <span>cm</span>
                         </div>
                     </div>
-                    <button class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
+                    <button id="area-ellipse" class="bg-blue-600 md:w-40 my-4 p-2 text-white rounded-xl">Calculate</button>
                 </div>
                 
             </section>
