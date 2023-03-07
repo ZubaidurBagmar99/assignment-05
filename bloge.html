@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between items-center px-10 py-5 bg-slate-100">
+            <div>
+                <h2 class="text-3xl font-bold">Interactive</h2>
+                <h4 class="text-2xl">Geometry Genius</h4>
+            </div>
+            <button class="bg-blue-500 px-4 py-2 rounded-xl font-semibold text-white" onclick="homePage()">Home</button>
+        </nav>
+    </header>
+    <main class="px-5 md:mx-10 pt-5 bg-gray-100">
+        <div>
+            <h2 class="text-xl font-semibold">What is DOM and what is the purpose of DOM?</h2>
+            <p class="md:ml-5 mx-6 md:mx-0 md:my-4 text-justify">
+                DOM stands for Document Object Model. DOM is a programming API for HTML and XML documents. We can also add events to these elements to make our page more dynamic.It is a programming interface that allows us to create, change or remove elements from the document. 
+                <br>
+                The purpose of DOM. It explain:
+                <ol class="list-decimal ml-14 md:ml-24 my-4">
+                    <li>The HTML elements as objects</li>
+                    <li>The methods to access all HTML elements</li>
+                    <li>The properties of all HTML elements</li>
+                    <li>The events for all HTML elements</li>
+                    <li> That is: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</li>
+                </ol>
+               </p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">How will you select HTML elements using DOM? Name the DOM methods.</h2>
+            <p class="md:ml-5 mx-6 md:mx-0 md:my-4 text-justify">
+                There are 5 ways select elements in a DOM using selectors.
+                <ol class="list-decimal ml-14 md:ml-24 my-4">
+                    <li>getElementsByTagName()</li>
+                    <li>getElementsByClassName()</li>
+                    <li>getElementById()</li>
+                    <li>querySelector()</li>
+                    <li>querySelectorAll().</li>
+                </ol>
+            </p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">What is event bubble?</h2>
+            <p class="md:ml-5 mx-6 md:mx-0 md:my-4 text-justify">
+                Event bubbling is a concept in the DOM. In the event bubbling model, an event starts at the most specific element and then flows upward toward the least specific element.
+                <br>
+                Click the button, following the order:
+                <ol class="list-disc ml-14 md:ml-24 my-4 ">
+                    <li>button</li>
+                    <li>div</li>
+                    <li>body</li>
+                    <li>html</li>
+                    <li>document</li>
+                </ol>
+            </p> 
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">What is a callback function and why will you use it?</h2>
+            <p class="md:ml-5 mx-6 md:mx-0 md:my-4 text-justify">
+                A callback function in javascript is a function that is passed as an argument in another function. 
+                <br>
+                A callback's purpose is to execute code in response to an event.
+            </p>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
